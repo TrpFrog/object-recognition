@@ -3,8 +3,6 @@ function img = good_resize(img)
 %   画素数がなるべく 320 * 240 に近くなるようにリサイズする
 
     [H, W, ~] = size(img);
-    disp(H)
-    disp(W)
 
     goal = 320 * 240;
     h = round(sqrt(H / W * goal));
