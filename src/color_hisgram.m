@@ -11,7 +11,7 @@ function res = color_hisgram(fig)
     res = zeros(1, 64);
     n = size(reduced, 1) * size(reduced, 2);
     for i = 1 : n
-        color = fig(i) + 1; % 1-indexed
+        color = reduced(i) + 1; % 1-indexed
         res(color) = res(color) + 1;
     end
 end
