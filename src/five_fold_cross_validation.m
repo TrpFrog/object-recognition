@@ -7,7 +7,7 @@ function five_fold_cross_validation(data, label, f_learn, f_test)
 %   戻り値はなし、分類率を出力する
 
     cv = 5;
-    n = length(imgs);
+    n = size(data, 1);
     idx = [1:n];
     accuracy = [];
     for i = 1 : cv
@@ -15,8 +15,8 @@ function five_fold_cross_validation(data, label, f_learn, f_test)
         train_data = data(mod(idx, cv) ~= (i - 1), :);
         eval_label = label(mod(idx, cv) == (i - 1), :);
         eval_data = data(mod(idx, cv) == (i - 1), :);
-        model = f_learn(train_label, train_data);
-        ac = f_test(model, eval_label, eval_data);
+        model = f_learn(train_data, train_label);
+        ac = f_test(model, eval_data, eval_label);
         accuracy = [accuracy ac];
     end
 
