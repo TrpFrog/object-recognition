@@ -1,5 +1,8 @@
 img
 
+# codebook
+*.mat
+
 # Windows default autosave extension
 *.asv
 
