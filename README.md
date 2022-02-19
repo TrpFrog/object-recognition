@@ -56,6 +56,12 @@
 
 
 
+### DCNN特徴量 + SVM 関係
+
+- `dcnn_matrix`
+    - `colorhis_matrix` の DCNN 特徴量版
+    - 画像のパスのセル配列、ネットワーク、レイヤ、サイズを渡す
+
 
 
 ## スクリプト
@@ -88,5 +94,69 @@ BoFベクトル + 非線形SVM による分類を行う。
 accuracy: 0.770000
 [Frogs and Leeks]
 accuracy: 0.920000
+```
+
+
+
+### scr_dcnn.m
+
+「alexnet, resnet101, googlenet, vgg19 によるDCNN特徴ベクトル + 線形SVM」 による画像分類を行う。
+
+```
+alexnet
+[Trumpets and Trombones]
+accuracy: 0.890000
+[Frogs and Leeks]
+accuracy: 1.000000
+
+resnet101
+[Trumpets and Trombones]
+accuracy: 0.950000
+[Frogs and Leeks]
+accuracy: 1.000000
+
+googlenet
+[Trumpets and Trombones]
+accuracy: 0.970000
+[Frogs and Leeks]
+accuracy: 1.000000
+
+vgg19
+[Trumpets and Trombones]
+accuracy: 0.935000
+[Frogs and Leeks]
+accuracy: 1.000000
+```
+
+
+
+### scr_dcnn_nonlinear.m
+
+「alexnet, resnet101, googlenet, vgg19 によるDCNN特徴ベクトル + **非**線形SVM」 による画像分類を行う。
+
+```
+alexnet
+[Trumpets and Trombones]
+accuracy: 0.910000
+[Frogs and Leeks]
+accuracy: 1.000000
+
+resnet101
+[Trumpets and Trombones]
+accuracy: 0.970000
+[Frogs and Leeks]
+accuracy: 1.000000
+
+googlenet
+[Trumpets and Trombones]
+accuracy: 0.970000
+[Frogs and Leeks]
+accuracy: 1.000000
+
+vgg19
+[Trumpets and Trombones]
+accuracy: 0.970000
+[Frogs and Leeks]
+accuracy: 1.000000
 ```
 
