@@ -8,28 +8,44 @@ disp('vgg19');
 test(vgg19, 'fc6', 4096);
 
 function test(net, layer, dcnn_size)
-    trp  = dcnn_matrix(get_img_fnames('trumpet'), net, layer, dcnn_size);
-    trb  = dcnn_matrix(get_img_fnames('trombone'), net, layer, dcnn_size);
-    frog = dcnn_matrix(get_img_fnames('frog'), net, layer, dcnn_size);
-    leek = dcnn_matrix(get_img_fnames('leek'), net, layer, dcnn_size);
+    trp_paths  = get_img_fnames('trumpet');
+    trb_paths  = get_img_fnames('trombone');
+    frog_paths = get_img_fnames('frog');
+    leek_paths = get_img_fnames('leek');
+    
+    trp_mat = dcnn_matrix(trp_paths, net, layer, dcnn_size);
+    trb_mat = dcnn_matrix(trb_paths, net, layer, dcnn_size);
+    frog_mat = dcnn_matrix(frog_paths, net, layer, dcnn_size);
+    leek_mat = dcnn_matrix(leek_paths, net, layer, dcnn_size);
 
     label = [-ones(100, 1); ones(100, 1)];
 
     disp('[Trumpets and Trombones]');
-    five_fold_cross_validation([trp; trb], label, @f_learn, @f_test);
+    matrix = [trp_mat; trb_mat];
+    paths = [trp_paths, trb_paths];
+    five_fold_cross_validation(matrix, label, paths, @f_learn_linear, @f_test);
+    five_fold_cross_validation(matrix, label, paths, @f_learn_rbf, @f_test);
     
     disp('[Frogs and Leeks]')
-    five_fold_cross_validation([frog; leek], label, @f_learn, @f_test);
+    matrix = [frog_mat; leek_mat];
+    paths = [frog_paths, leek_paths];
+    five_fold_cross_validation(matrix, label, paths, @f_learn_linear, @f_test);
+    five_fold_cross_validation(matrix, label, paths, @f_learn_rbf, @f_test);
 
-    % モデル学習用関数
-    function model = f_learn(train_data, train_label)
+    % モデル学習用関数 (線形SVM)
+    function model = f_learn_linear(train_data, train_label)
         model = fitcsvm(train_data, train_label,'KernelFunction','linear');
+    end
+
+    % モデル学習用関数 (非線形SVM)
+    function model = f_learn_rbf(train_data, train_label)
+        model = fitcsvm(train_data, train_label, 'KernelFunction', 'rbf', 'KernelScale', 'auto');
     end
     
     % テスト用関数
-    function ac = f_test(model, eval_data, eval_label) 
-        [plabel, ~] = predict(model, eval_data);
-        correct = sum(abs(plabel + eval_label)) / 2;
-        ac = correct / length(eval_label);
+    function [ac, scores, is_correct] = f_test(model, eval_data, eval_label) 
+        [plabel, scores] = predict(model, eval_data);
+        is_correct = abs(plabel + eval_label) / 2;
+        ac = sum(is_correct) / length(eval_label);
     end
 end
