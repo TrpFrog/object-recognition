@@ -3,6 +3,13 @@ img
 # codebook
 *.mat
 
+# result
+*.txt
+*.html
+
+# distributed script
+rank.pl
+
 # Windows default autosave extension
 *.asv
 
