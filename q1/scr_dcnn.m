@@ -23,14 +23,24 @@ function test(net, layer, dcnn_size)
     disp('[Trumpets and Trombones]');
     matrix = [trp_mat; trb_mat];
     paths = [trp_paths, trb_paths];
+    disp('------------- Linear SVM -------------');
     five_fold_cross_validation(matrix, label, paths, @f_learn_linear, @f_test);
+    disp('--------------------------------------');
+    disp('----------- Non-linear SVM -----------');
     five_fold_cross_validation(matrix, label, paths, @f_learn_rbf, @f_test);
+    disp('--------------------------------------');
+    fprintf('\n');
     
     disp('[Frogs and Leeks]')
     matrix = [frog_mat; leek_mat];
     paths = [frog_paths, leek_paths];
+    disp('------------- Linear SVM -------------');
     five_fold_cross_validation(matrix, label, paths, @f_learn_linear, @f_test);
+    disp('--------------------------------------');
+    disp('----------- Non-linear SVM -----------');
     five_fold_cross_validation(matrix, label, paths, @f_learn_rbf, @f_test);
+    disp('--------------------------------------');
+    fprintf('\n');
 
     % モデル学習用関数 (線形SVM)
     function model = f_learn_linear(train_data, train_label)
