@@ -3,7 +3,7 @@ function fnlist = get_img_fnames(target)
 %   例えば get_img_fnames('trumpet') ならば
 %   トランペットの画像フォルダ内に含まれる画像のパスのセル配列を返す
     fnlist = {};
-    DIR = strcat('../img/',target,'/');
+    DIR = strcat('img/',target,'/');
     W = dir(DIR);
 
     for j=1:size(W)
