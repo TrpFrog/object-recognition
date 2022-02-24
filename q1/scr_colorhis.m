@@ -44,6 +44,12 @@ function [ac, scores, is_correct] = f_test(model, eval_data, eval_label)
         end
     end
 
+    % 現在スコアにはユークリッド距離が入っているが、
+    % ユークリッド距離は小さい方がより正確な結果であると考えられるため、
+    % 負の値にする。
+    % (負の値をとることでユークリッド距離が小さいほど大きなスコアとなる)
+    scores = -scores;
+
     % テストデータ数で割る
     ac = ac / n;
 end
