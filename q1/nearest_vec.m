@@ -3,4 +3,5 @@ function [dist, idx] = nearest_vec(mat, vec)
     n = size(mat, 1);
     mat = mat - repmat(vec, n, 1);
     [dist, idx] = min(sum(mat.^2, 2)); % a^2 <= b^2 ならば |a| <= |b|
+    dist = sqrt(dist);
 end
