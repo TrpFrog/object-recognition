@@ -112,25 +112,25 @@ BoFベクトル + 非線形SVM による分類を行う。
 ```
 [Trumpets and Trombones]
   [Top correct images]
-  img/trombone/000034.jpg 1.042946
-  img/trumpet/000035.jpg 1.006059
-  img/trombone/000095.jpg 0.953104
+  img/trumpet/000109.jpg 1.045216
+  img/trombone/000109.jpg 0.991987
+  img/trumpet/000058.jpg 0.979795
   [Top incorrect images]
-  img/trombone/000066.jpg 1.001773
-  img/trombone/000013.jpg 0.973041
-  img/trombone/000027.jpg 0.930085
-accuracy: 0.800000
+  img/trombone/000024.jpg 0.785272
+  img/trombone/000013.jpg 0.769484
+  img/trumpet/000051.jpg 0.723784
+accuracy: 0.810000
 
 [Frogs and Leeks]
   [Top correct images]
-  img/leek/000011.jpg 1.483670
-  img/leek/000058.jpg 1.412738
-  img/frog/000076.jpg 1.363731
+  img/leek/000004.jpg 1.582948
+  img/leek/000017.jpg 1.539405
+  img/leek/000026.jpg 1.451947
   [Top incorrect images]
-  img/frog/000029.jpg 1.229452
-  img/frog/000071.jpg 0.991923
-  img/frog/000099.jpg 0.965545
-accuracy: 0.920000
+  img/leek/000067.jpg 0.791777
+  img/frog/000010.jpg 0.761106
+  img/frog/000099.jpg 0.703192
+accuracy: 0.915000
 ```
 
 
@@ -144,41 +144,41 @@ alexnet
 [Trumpets and Trombones]
 ------------- Linear SVM -------------
   [Top correct images]
-  img/trombone/000084.jpg 2.076298
-  img/trombone/000036.jpg 1.654065
-  img/trombone/000034.jpg 1.557592
+  img/trombone/000082.jpg 2.076298
+  img/trombone/000004.jpg 1.854511
+  img/trumpet/000013.jpg 1.699343
   [Top incorrect images]
-  img/trumpet/000015.jpg 1.699343
-  img/trombone/000041.jpg 1.588419
-  img/trumpet/000111.jpg 1.074477
+  img/trombone/000041.jpg 1.049238
+  img/trombone/000027.jpg 0.934369
+  img/trombone/000047.jpg 0.914957
 accuracy: 0.900000
 --------------------------------------
 ----------- Non-linear SVM -----------
   [Top correct images]
   img/trumpet/000052.jpg 1.475181
-  img/trombone/000013.jpg 1.328322
-  img/trombone/000003.jpg 1.322803
+  img/trombone/000004.jpg 1.432469
+  img/trumpet/000046.jpg 1.429362
   [Top incorrect images]
-  img/trombone/000041.jpg 1.315485
-  img/trumpet/000015.jpg 1.173087
-  img/trombone/000052.jpg 1.116194
+  img/trombone/000041.jpg 0.712832
+  img/trumpet/000126.jpg 0.602192
+  img/trombone/000047.jpg 0.452466
 accuracy: 0.910000
 --------------------------------------
 
 [Frogs and Leeks]
 ------------- Linear SVM -------------
   [Top correct images]
-  img/leek/000028.jpg 2.074516
-  img/leek/000051.jpg 1.849995
-  img/leek/000001.jpg 1.849690
+  img/leek/000026.jpg 2.074516
+  img/leek/000004.jpg 2.007032
+  img/leek/000033.jpg 1.982283
   [Top incorrect images]
 accuracy: 1.000000
 --------------------------------------
 ----------- Non-linear SVM -----------
   [Top correct images]
-  img/leek/000028.jpg 1.746225
-  img/leek/000013.jpg 1.608937
-  img/frog/000060.jpg 1.608610
+  img/leek/000026.jpg 1.746225
+  img/leek/000004.jpg 1.689339
+  img/leek/000033.jpg 1.672888
   [Top incorrect images]
 accuracy: 1.000000
 --------------------------------------
@@ -187,41 +187,41 @@ resnet101
 [Trumpets and Trombones]
 ------------- Linear SVM -------------
   [Top correct images]
-  img/trumpet/000065.jpg 1.987961
-  img/trombone/000006.jpg 1.761446
-  img/trombone/000106.jpg 1.730450
+  img/trumpet/000064.jpg 1.987961
+  img/trombone/000084.jpg 1.847380
+  img/trombone/000039.jpg 1.808177
   [Top incorrect images]
-  img/trombone/000041.jpg 1.808177
-  img/trumpet/000032.jpg 1.223122
-  img/trumpet/000083.jpg 0.218644
+  img/trombone/000041.jpg 1.274331
+  img/trumpet/000123.jpg 0.570181
+  img/trumpet/000032.jpg 0.429116
 accuracy: 0.950000
 --------------------------------------
 ----------- Non-linear SVM -----------
   [Top correct images]
-  img/trombone/000006.jpg 1.472899
-  img/trombone/000034.jpg 1.413686
-  img/trumpet/000046.jpg 1.408369
+  img/trombone/000066.jpg 1.686773
+  img/trombone/000004.jpg 1.512264
+  img/trombone/000053.jpg 1.481053
   [Top incorrect images]
-  img/trombone/000041.jpg 1.060746
-  img/trumpet/000032.jpg 0.988919
-  img/trumpet/000083.jpg 0.192947
+  img/trombone/000041.jpg 0.876075
+  img/trombone/000056.jpg 0.277250
+  img/trumpet/000083.jpg 0.237917
 accuracy: 0.965000
 --------------------------------------
 
 [Frogs and Leeks]
 ------------- Linear SVM -------------
   [Top correct images]
-  img/frog/000076.jpg 1.687419
-  img/frog/000044.jpg 1.662978
-  img/frog/000004.jpg 1.614383
+  img/frog/000074.jpg 1.687419
+  img/frog/000042.jpg 1.662978
+  img/frog/000002.jpg 1.614383
   [Top incorrect images]
 accuracy: 1.000000
 --------------------------------------
 ----------- Non-linear SVM -----------
   [Top correct images]
-  img/frog/000044.jpg 1.467752
-  img/frog/000076.jpg 1.457662
-  img/frog/000004.jpg 1.444315
+  img/frog/000042.jpg 1.467752
+  img/frog/000074.jpg 1.457662
+  img/frog/000002.jpg 1.444315
   [Top incorrect images]
 accuracy: 1.000000
 --------------------------------------
@@ -230,41 +230,41 @@ googlenet
 [Trumpets and Trombones]
 ------------- Linear SVM -------------
   [Top correct images]
-  img/trombone/000084.jpg 2.272048
-  img/trombone/000034.jpg 2.238054
-  img/trombone/000078.jpg 2.132393
+  img/trombone/000084.jpg 2.416699
+  img/trombone/000037.jpg 2.381108
+  img/trombone/000065.jpg 2.317755
   [Top incorrect images]
-  img/trombone/000041.jpg 2.129383
-  img/trumpet/000049.jpg 1.796975
-  img/trombone/000052.jpg 1.110829
+  img/trombone/000041.jpg 0.860713
+  img/trombone/000056.jpg 0.651318
+  img/trumpet/000123.jpg 0.605277
 accuracy: 0.965000
 --------------------------------------
 ----------- Non-linear SVM -----------
   [Top correct images]
-  img/trombone/000013.jpg 1.612670
-  img/trombone/000106.jpg 1.544221
-  img/trumpet/000090.jpg 1.523797
+  img/trumpet/000046.jpg 1.917373
+  img/trombone/000112.jpg 1.671854
+  img/trumpet/000117.jpg 1.619313
   [Top incorrect images]
-  img/trumpet/000049.jpg 1.581763
-  img/trombone/000041.jpg 1.294058
-  img/trumpet/000168.jpg 1.032150
+  img/trombone/000041.jpg 0.733353
+  img/trombone/000056.jpg 0.583285
+  img/trumpet/000123.jpg 0.450082
 accuracy: 0.960000
 --------------------------------------
 
 [Frogs and Leeks]
 ------------- Linear SVM -------------
   [Top correct images]
-  img/frog/000063.jpg 1.775359
-  img/frog/000032.jpg 1.668341
-  img/frog/000076.jpg 1.637236
+  img/frog/000062.jpg 1.775359
+  img/frog/000031.jpg 1.668341
+  img/frog/000074.jpg 1.637236
   [Top incorrect images]
 accuracy: 1.000000
 --------------------------------------
 ----------- Non-linear SVM -----------
   [Top correct images]
-  img/frog/000063.jpg 1.545641
-  img/frog/000076.jpg 1.501950
-  img/frog/000032.jpg 1.452456
+  img/frog/000062.jpg 1.545641
+  img/leek/000033.jpg 1.506754
+  img/frog/000074.jpg 1.501950
   [Top incorrect images]
 accuracy: 1.000000
 --------------------------------------
@@ -273,41 +273,41 @@ vgg19
 [Trumpets and Trombones]
 ------------- Linear SVM -------------
   [Top correct images]
-  img/trumpet/000015.jpg 2.073871
-  img/trombone/000084.jpg 1.876587
-  img/trumpet/000065.jpg 1.843254
+  img/trumpet/000013.jpg 2.073871
+  img/trumpet/000046.jpg 1.897645
+  img/trombone/000082.jpg 1.876587
   [Top incorrect images]
-  img/trombone/000041.jpg 1.624534
-  img/trombone/000022.jpg 0.995335
-  img/trombone/000044.jpg 0.292523
+  img/trumpet/000123.jpg 0.843630
+  img/trombone/000041.jpg 0.578862
+  img/trombone/000056.jpg 0.292750
 accuracy: 0.970000
 --------------------------------------
 ----------- Non-linear SVM -----------
   [Top correct images]
   img/trumpet/000075.jpg 1.672333
-  img/trumpet/000046.jpg 1.564924
-  img/trumpet/000103.jpg 1.564924
+  img/trumpet/000041.jpg 1.564924
+  img/trumpet/000099.jpg 1.564924
   [Top incorrect images]
-  img/trombone/000041.jpg 0.941757
+  img/trumpet/000123.jpg 0.528126
+  img/trombone/000041.jpg 0.488657
   img/trombone/000044.jpg 0.146779
-  img/trombone/000056.jpg -1.008252
 accuracy: 0.980000
 --------------------------------------
 
 [Frogs and Leeks]
 ------------- Linear SVM -------------
   [Top correct images]
-  img/frog/000076.jpg 1.863508
-  img/frog/000071.jpg 1.713079
-  img/leek/000011.jpg 1.709077
+  img/frog/000074.jpg 1.863508
+  img/frog/000069.jpg 1.713079
+  img/leek/000015.jpg 1.709077
   [Top incorrect images]
 accuracy: 1.000000
 --------------------------------------
 ----------- Non-linear SVM -----------
   [Top correct images]
-  img/frog/000076.jpg 1.634277
-  img/frog/000060.jpg 1.525262
-  img/frog/000096.jpg 1.486887
+  img/frog/000074.jpg 1.634277
+  img/frog/000058.jpg 1.525262
+  img/frog/000014.jpg 1.489810
   [Top incorrect images]
 accuracy: 1.000000
 --------------------------------------
