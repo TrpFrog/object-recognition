@@ -30,6 +30,7 @@ end
 function [ac, scores, is_correct] = f_test(model, eval_data, eval_label)
     n = size(eval_data, 1);
     [plabel, scores] = predict(model, eval_data);
+    scores = abs(scores(:,2));
 
     % label は 1 か -1 かのどちらかである。
     % もし分類が正しければ plabel と eval_label はそれぞれ 1 と 1, または -1 と -1 になるはずであり、

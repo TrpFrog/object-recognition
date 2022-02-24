@@ -56,6 +56,8 @@ function test(net, layer, dcnn_size)
     function [ac, scores, is_correct] = f_test(model, eval_data, eval_label) 
         [plabel, scores] = predict(model, eval_data);
         is_correct = abs(plabel + eval_label) / 2;
+
+        scores = abs(scores(:,2));
         ac = sum(is_correct) / length(eval_label);
     end
 end
